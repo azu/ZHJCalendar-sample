@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalendarViewDelegate.h"
 
-@interface ViewController : UIViewController
+@class CalendarView;
 
+@interface ViewController : UIViewController <CalendarViewDelegate>
+
+@property (nonatomic,strong)CalendarView *calendarView;
+@property (nonatomic,strong)NSDate *selectDate;
 @end
