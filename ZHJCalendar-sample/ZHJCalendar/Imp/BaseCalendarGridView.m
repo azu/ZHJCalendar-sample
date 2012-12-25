@@ -6,7 +6,6 @@
 //  Copyright (c) 2012年 Sword.Zhou. All rights reserved.
 //
 
-#import "CalendarGridView.h"
 #import "BaseCalendarGridView.h"
 
 @interface BaseCalendarGridView ()
@@ -19,11 +18,6 @@
 
 @synthesize gridButton;
 
-- (IBAction)onGridButtonTouched:(id)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(calendarGridViewDidSelectGrid:)]){
-        [_delegate calendarGridViewDidSelectGrid:self];
-    }
-}
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -61,20 +55,24 @@
         self.gridButton.selected = self.selected;
         if ([_calDay isToday]){
             [self.gridButton setBackgroundImage:[UIImage imageNamed:@"todaycell.png"] forState:UIControlStateNormal];
-            [self.gridButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-
+            [self.gridButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            // 太字にする
+            self.gridButton.titleLabel.font = [UIFont boldSystemFontOfSize:[self.gridButton.titleLabel.font pointSize]];
         } else {
             [self.gridButton setBackgroundImage:[UIImage imageNamed:@"datecell.png"] forState:UIControlStateNormal];
             [self.gridButton setTitleColor:
-                                 [UIColor colorWithRed:122 / 255.0 green:119 / 255.0 blue:122 / 255.0 alpha:1.0] forState:UIControlStateNormal];
-
+            [UIColor colorWithRed:122 / 255.0 green:119 / 255.0 blue:122 / 255.0 alpha:1.0] forState:UIControlStateNormal];
+            self.gridButton.titleLabel.font = [UIFont systemFontOfSize:[self.gridButton.titleLabel.font pointSize]];
         }
-        [self.gridButton setBackgroundImage:[UIImage imageNamed:@"date_selected.png"] forState:UIControlStateSelected];
 
+        if (self.selected){
+            [self.gridButton setBackgroundImage:[UIImage imageNamed:@"date_selected.png"] forState:UIControlStateSelected];
+        }
     } else {
         self.gridButton.selected = FALSE;
         [self.gridButton setBackgroundImage:[UIImage imageNamed:@"todaycell.png"] forState:UIControlStateNormal];
         [self.gridButton setTitleColor:[UIColor colorWithRed:233 / 255.0 green:232 / 255.0 blue:231 / 255.0 alpha:1.0] forState:UIControlStateNormal];
+        self.gridButton.titleLabel.font = [UIFont systemFontOfSize:[self.gridButton.titleLabel.font pointSize]];
     }
     [self.gridButton setTitle:title forState:UIControlStateNormal];
 }

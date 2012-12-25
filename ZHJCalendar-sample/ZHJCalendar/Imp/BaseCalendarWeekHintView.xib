@@ -13,7 +13,6 @@
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
-			<string>IBUIImageView</string>
 			<string>IBUIView</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
@@ -32,82 +31,62 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIView" id="325717127">
+			<object class="IBUIView" id="64456650">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIButton" id="946532993">
-						<reference key="NSNextResponder" ref="325717127"/>
-						<int key="NSvFlags">310</int>
+					<object class="IBUIButton" id="871155037">
+						<reference key="NSNextResponder" ref="64456650"/>
+						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{45, 35}</string>
-						<reference key="NSSuperview" ref="325717127"/>
+						<reference key="NSSuperview" ref="64456650"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="908078260">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
 						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="656320040">
+						<string key="IBUINormalTitle">Sun</string>
+						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<reference key="IBUISelectedTitleColor" ref="656320040"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC40OTgwMzkyMTU3IDAuNDg2Mjc0NTA5OCAwLjQ5NDExNzY0NzEAA</bytes>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn_grid_selected@2x.png</string>
-						</object>
-						<object class="NSCustomResource" key="IBUISelectedBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">date_selected.png</string>
-						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">datecell.png</string>
-						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">1</int>
+							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUIImageView" id="587284188">
-						<reference key="NSNextResponder" ref="325717127"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 26}, {5, 6}}</string>
-						<reference key="NSSuperview" ref="325717127"/>
-						<reference key="NSWindow"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">icon_record_calendar.png</string>
 						</object>
 					</object>
 				</array>
 				<string key="NSFrameSize">{45, 35}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="946532993"/>
+				<reference key="NSNextKeyView" ref="871155037"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="908078260"/>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MQA</bytes>
+					<object class="NSColorSpace" key="NSCustomColorSpace">
+						<int key="NSID">2</int>
+					</object>
+				</object>
+				<object class="IBUISimulatedSizeMetrics" key="IBUISimulatedDestinationMetrics">
+					<string key="IBUISimulatedSizeMetricsClass">IBUISimulatedFreeformSizeMetricsSentinel</string>
+					<string key="IBUIDisplayName">Freeform</string>
+				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</array>
@@ -115,28 +94,11 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">gridButton</string>
-						<reference key="source" ref="325717127"/>
-						<reference key="destination" ref="946532993"/>
+						<string key="label">hintButton</string>
+						<reference key="source" ref="64456650"/>
+						<reference key="destination" ref="871155037"/>
 					</object>
-					<int key="connectionID">7</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">iconImageView</string>
-						<reference key="source" ref="325717127"/>
-						<reference key="destination" ref="587284188"/>
-					</object>
-					<int key="connectionID">19</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">onGridButtonTouched:</string>
-						<reference key="source" ref="946532993"/>
-						<reference key="destination" ref="325717127"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">14</int>
+					<int key="connectionID">4</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -160,24 +122,16 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">2</int>
-						<reference key="object" ref="325717127"/>
+						<reference key="object" ref="64456650"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="946532993"/>
-							<reference ref="587284188"/>
+							<reference ref="871155037"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
-						<reference key="object" ref="946532993"/>
-						<reference key="parent" ref="325717127"/>
-						<string key="objectName">grid button</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="587284188"/>
-						<reference key="parent" ref="325717127"/>
-						<string key="objectName">体調記録アイコン</string>
+						<reference key="object" ref="871155037"/>
+						<reference key="parent" ref="64456650"/>
 					</object>
 				</array>
 			</object>
@@ -185,48 +139,43 @@
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="2.CustomClassName">BaseCalendarGridView</string>
+				<string key="2.CustomClassName">BaseCalendarWeekHintView</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="3.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="2" key="3.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">25</int>
+			<int key="maxID">4</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">BaseCalendarGridView</string>
-					<string key="superclassName">CalendarGridView</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="gridButton">UIButton</string>
-						<string key="iconImageView">UIImageView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="gridButton">
-							<string key="name">gridButton</string>
+					<string key="className">BaseCalendarWeekHintView</string>
+					<string key="superclassName">CalendarWeekHintView</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">hintButton</string>
+						<string key="NS.object.0">UIButton</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">hintButton</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">hintButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="iconImageView">
-							<string key="name">iconImageView</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-					</dictionary>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/BaseCalendarGridView.h</string>
+						<string key="minorKey">./Classes/BaseCalendarWeekHintView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">CalendarGridView</string>
+					<string key="className">CalendarWeekHintView</string>
 					<string key="superclassName">UIView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CalendarGridView.h</string>
+						<string key="minorKey">./Classes/CalendarWeekHintView.h</string>
 					</object>
 				</object>
 			</array>
@@ -235,12 +184,6 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="btn_grid_selected@2x.png">{78, 62}</string>
-			<string key="date_selected.png">{45, 35}</string>
-			<string key="datecell.png">{45, 35}</string>
-			<string key="icon_record_calendar.png">{5, 6}</string>
-		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
 </archive>

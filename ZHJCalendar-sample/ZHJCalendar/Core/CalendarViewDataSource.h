@@ -14,19 +14,25 @@
 @class CalendarView;
 @class CalMonth;
 @class CalDay;
+@class CalendarWeekHintView;
 
 @protocol CalendarViewDataSource <NSObject>
+
 @optional
-- (NSArray*) weekTitlesForCalendarView:(CalendarView*)calendarView;
+- (NSArray *)weekTitlesForCalendarView:(CalendarView *)calendarView;
 //- (NSString*) calendarView:(CalendarView*)calendarView titleForCellAtRow:(NSInteger)row column:(NSInteger)column calDay:(CalDay*)calDay;
 
-- (NSString*) calendarView:(CalendarView*)calendarView titleForMonth:(CalMonth*)calMonth;
+- (NSString *)calendarView:(CalendarView *)calendarView titleForMonth:(CalMonth *)calMonth;
 
-- (CalendarGridView*) calendarView:(CalendarView*)calendarView calendarGridViewForRow:(NSInteger)row column:(NSInteger)column calDay:(CalDay*)calDay;
+- (CalendarGridView *)calendarView:(CalendarView *)calendarView calendarGridViewForRow:(NSInteger)row
+                      column:(NSInteger)column calDay:(CalDay *)calDay;
 
-- (CalendarGridView*) calendarView:(CalendarView*)calendarView calendarDisableGridViewForRow:(NSInteger)row column:(NSInteger)column calDay:(CalDay*)calDay;
+- (CalendarGridView *)calendarView:(CalendarView *)calendarView calendarDisableGridViewForRow:(NSInteger)row
+                      column:(NSInteger)column calDay:(CalDay *)calDay;
 
-- (CalendarViewHeaderView*) headerViewForCalendarView:(CalendarView*)calendarView;
-- (CalendarViewFooterView*) footerViewForCalendarView:(CalendarView*)calendarView;
+- (CalendarViewHeaderView *)headerViewForCalendarView:(CalendarView *)calendarView;
+
+- (CalendarViewFooterView *)footerViewForCalendarView:(CalendarView *)calendarView;
+- (CalendarWeekHintView *)weekHintViewForCalendarView:(CalendarView *)calendarView;
 
 @end

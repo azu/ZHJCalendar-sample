@@ -29,7 +29,6 @@
     if (self.calendarView == nil){
         BaseDataSourceImp *dataSource = [[BaseDataSourceImp alloc] init];
         self.calendarView = [CalendarView viewFromNib];
-        // 44 + (35*6) + 28 = 282
         self.calendarView.frame = CGRectMake(0, 0, 320, self.calendarView.frame.size.height);
         self.calendarView.gridSize = CGSizeMake(45.5, 35);
         self.calendarView.dataSource = dataSource;
@@ -44,6 +43,7 @@
 
 - (void)calendarViewDidSelectDay:(CalendarView *)calendarView calDay:(CalDay *)calDay {
     self.selectDate = calDay.date;
+    NSLog(@"選択した日付 = %@", self.selectDate);
 }
 
 - (void)didReceiveMemoryWarning {

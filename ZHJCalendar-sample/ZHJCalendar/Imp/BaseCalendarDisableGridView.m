@@ -19,12 +19,6 @@
 
 @synthesize gridButton;
 
-- (IBAction)onGridButtonTouched:(id)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(calendarGridViewDidSelectGrid:)]){
-        [_delegate calendarGridViewDidSelectGrid:self];
-    }
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.gridButton.userInteractionEnabled = NO;

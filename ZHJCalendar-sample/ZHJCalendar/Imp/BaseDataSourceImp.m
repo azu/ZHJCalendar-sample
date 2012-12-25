@@ -11,6 +11,8 @@
 #import "BaseCalendarDisableGridView.h"
 #import "BaseCalendarViewHeaderView.h"
 #import "CalMonth.h"
+#import "CalendarWeekHintView.h"
+#import "BaseCalendarWeekHintView.h"
 
 @implementation BaseDataSourceImp
 
@@ -21,34 +23,12 @@
 - (void)updateGridView:(CalendarGridView *)calendarView calendarGridViewForRow:(NSInteger)row
         column:(NSInteger)column calDay:(CalDay *)calDay {
     BaseCalendarGridView *gridView = (BaseCalendarGridView *) calendarView;
-
-    if (row % 2 == 0 && column % 3 == 0){
-        [gridView.checkDoseImageView setImage:[UIImage imageNamed:@"icon_drugcheck_calendar.png"]];
-        [gridView.checkDoseImageView setHidden:NO];
-    } else {
-        [gridView.checkDoseImageView setHidden:YES];
+    // セルのアイコンを表示するかを制御する
+    if (row % 2 == 0){
+        gridView.iconImageView.hidden = YES;
+    } else{
+        gridView.iconImageView.hidden = NO;
     }
-    if (row % 4 == 0){
-        [gridView.conditionImageView setImage:[UIImage imageNamed:@"icon_record_calendar.png"]];
-        [gridView.conditionImageView setHidden:NO];
-    } else {
-        [gridView.conditionImageView setHidden:YES];
-    }
-
-    if (row % 5 == 0){
-        [gridView.visitHospitalImageView setImage:[UIImage imageNamed:@"icon_hospital_calendar.png"]];
-        [gridView.visitHospitalImageView setHidden:NO];
-    } else {
-        [gridView.visitHospitalImageView setHidden:YES];
-    }
-
-    if (row % 6 == 0){
-        [gridView.seizureImageView setImage:[UIImage imageNamed:@"icon_fit_calendar.png"]];
-        [gridView.seizureImageView setHidden:NO];
-    } else {
-        [gridView.seizureImageView setHidden:YES];
-    }
-
 }
 
 - (CalendarGridView *)calendarView:(CalendarView *)calendarView calendarGridViewForRow:(NSInteger)row
@@ -76,6 +56,10 @@
     return [BaseCalendarViewHeaderView viewFromNib];
 }
 
+// Sun,Mon,Tsu ... カレンダーの曜日部分
+- (CalendarWeekHintView *)weekHintViewForCalendarView:(CalendarView *)calendarView {
+    return [BaseCalendarWeekHintView viewFromNib];
+}
 //- (NSArray *)weekTitlesForCalendarView:(CalendarView *)calendarView {
 //    return [NSArray arrayWithObjects:@"日", @"月", @"火", @"水", @"木", @"金", @"土", nil];
 //}

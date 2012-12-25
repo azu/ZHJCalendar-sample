@@ -9,6 +9,7 @@
 #import "CalendarView.h"
 #import "CalMonth.h"
 #import "ITTDebug.h"
+#import "CalendarWeekHintView.h"
 
 #define MARGIN_LEFT                              0
 #define MARGIN_TOP                               0
@@ -16,7 +17,7 @@
 #define PADDING_HORIZONTAL                       0
 #define HORIZONTAL_SWIPE_HEIGHT_CONSTRAINT       80
 #define HORIZONTAL_SWIPE_WIDTH_CONSTRAINT        90
-#define SWIPE_TIMER_INTERVAL                      0.3
+#define SWIPE_TIMER_INTERVAL                      0.4
 
 @interface CalendarView ()
 
@@ -153,6 +154,12 @@
 }
 
 - (void)updateCalendar {
+    _firstLayout = TRUE;
+    [self recycleAllGridViews];
+    [self setNeedsLayout];
+}
+
+- (void)updateCalendar:(BOOL)animated {
     _firstLayout = TRUE;
     [self recycleAllGridViews];
     [self setNeedsLayout];
@@ -529,6 +536,14 @@
     return headerView;
 }
 
+- (CalendarWeekHintView *)findWeekHintView {
+    CalendarWeekHintView *weekHintView = nil;
+    if (_dataSource && [_dataSource respondsToSelector:@selector(weekHintViewForCalendarView:)]){
+        weekHintView = [_dataSource weekHintViewForCalendarView:self];
+    }
+    return weekHintView;
+}
+
 - (CalendarViewFooterView *)findFooterView {
     CalendarViewFooterView *footerView = nil;
     if (_dataSource && [_dataSource respondsToSelector:@selector(footerViewForCalendarView:)]){
@@ -678,15 +693,11 @@
                 _calendarFooterView = calendarFooterView;
                 [self.footerView addSubview:_calendarFooterView];
             }
-            else {
-                CGRect frame = self.frame;
-                frame.size.height = CALENDAR_VIEW_HEIGHT_WITHOUT_FOOTER_VIEW;
-                self.frame = frame;
-            }
         }
         /*
          * layout week hint labels
          */
+
         for (UIView *subview in self.weekHintView.subviews){
             /*
              * subview is not background imageview
@@ -700,16 +711,14 @@
         CGFloat marginX = 0;
         NSArray *titles = [self findWeekTitles];
         for (NSInteger i = 0 ;i < NUMBER_OF_DAYS_IN_WEEK ;i++){
-            UILabel *label = [[UILabel alloc]
-                                       initWithFrame:CGRectMake(marginX, 0, width, CGRectGetHeight(self.weekHintView.bounds))];
-            label.textAlignment = UITextAlignmentCenter;
-            label.textColor = [UIColor blackColor];
-            label.font = [UIFont systemFontOfSize:14];
-            label.text = [titles objectAtIndex:i];
-            label.backgroundColor = [UIColor clearColor];
-            label.minimumFontSize = 12;
-            label.adjustsFontSizeToFitWidth = TRUE;
-            [self.weekHintView addSubview:label];
+            // 曜日のラベルボタン
+            CalendarWeekHintView *weekHintView = [self findWeekHintView];
+            weekHintView.frame = CGRectMake(marginX, 0, width, CGRectGetHeight(self.weekHintView.bounds));
+            [weekHintView setTitle:[titles objectAtIndex:i]];
+            enum ZHJ_DayOfWeek week = (enum ZHJ_DayOfWeek) i;
+            [weekHintView setDayOfWeek:week];// 0,1... == Sun,Mon,....
+            [weekHintView setNeedsLayout];
+            [self.weekHintView addSubview:weekHintView];
             marginX += width;
         }
         _firstLayout = FALSE;

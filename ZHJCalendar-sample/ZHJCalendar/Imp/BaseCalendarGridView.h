@@ -10,8 +10,5 @@
 
 @interface BaseCalendarGridView : CalendarGridView
 
-@property(weak, nonatomic) IBOutlet UIImageView *checkDoseImageView;
-@property(weak, nonatomic) IBOutlet UIImageView *conditionImageView;
-@property(weak, nonatomic) IBOutlet UIImageView *visitHospitalImageView;
-@property(weak, nonatomic) IBOutlet UIImageView *seizureImageView;
+@property(weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @end

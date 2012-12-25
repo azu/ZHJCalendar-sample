@@ -13,7 +13,6 @@
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
 			<string>IBUIButton</string>
-			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
 			<string>IBUIView</string>
 		</array>
@@ -37,22 +36,6 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="850724363">
-						<reference key="NSNextResponder" ref="847863737"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{46, 0}, {229, 44}}</string>
-						<reference key="NSSuperview" ref="847863737"/>
-						<reference key="NSNextKeyView" ref="1021298651"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">4</int>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">navigationbar_center.png</string>
-						</object>
-					</object>
 					<object class="IBUILabel" id="1021298651">
 						<reference key="NSNextResponder" ref="847863737"/>
 						<int key="NSvFlags">292</int>
@@ -68,10 +51,7 @@
 						<string key="IBUIText">2012年 3月</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace">
-								<int key="NSID">1</int>
-							</object>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -90,22 +70,27 @@
 					<object class="IBUIButton" id="155292222">
 						<reference key="NSNextResponder" ref="847863737"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{46, 44}</string>
+						<string key="NSFrameSize">{55, 44}</string>
 						<reference key="NSSuperview" ref="847863737"/>
-						<reference key="NSNextKeyView" ref="850724363"/>
+						<reference key="NSNextKeyView" ref="1021298651"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">前の月</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="558323440">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
+						<bool key="IBUIReversesTitleShadowWhenHighlighted">YES</bool>
+						<double key="IBUITitleEdgeInsets.top">0.0</double>
+						<double key="IBUITitleEdgeInsets.bottom">0.0</double>
+						<double key="IBUITitleEdgeInsets.left">6</double>
+						<double key="IBUITitleEdgeInsets.right">0.0</double>
+						<string key="IBUINormalTitle">前</string>
+						<object class="NSColor" key="IBUIHighlightedTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4yNzQ1MDk4MTc0IDAuNjAzOTIxNTkyMiAwLjgyNzQ1MDk5MDcAA</bytes>
 						</object>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<object class="NSColor" key="IBUINormalTitleShadowColor" id="391010233">
 							<int key="NSColorSpace">3</int>
@@ -113,22 +98,22 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">navigationbar_left.png</string>
+							<string key="NSResourceName">arrow_left.png</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="595695824">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="383601936">
 							<int key="type">2</int>
-							<double key="pointSize">15</double>
+							<int key="size">2</int>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="495911012">
+						<object class="NSFont" key="IBUIFont" id="51578153">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">15</double>
+							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 					<object class="IBUIButton" id="578615022">
 						<reference key="NSNextResponder" ref="847863737"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{274, 0}, {46, 44}}</string>
+						<string key="NSFrame">{{265, 0}, {55, 44}}</string>
 						<reference key="NSSuperview" ref="847863737"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -138,19 +123,33 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">次の月</string>
-						<reference key="IBUIHighlightedTitleColor" ref="558323440"/>
+						<bool key="IBUIReversesTitleShadowWhenHighlighted">YES</bool>
+						<double key="IBUITitleEdgeInsets.top">0.0</double>
+						<double key="IBUITitleEdgeInsets.bottom">0.0</double>
+						<double key="IBUITitleEdgeInsets.left">0.0</double>
+						<double key="IBUITitleEdgeInsets.right">15</double>
+						<double key="IBUIImageEdgeInsets.top">0.0</double>
+						<double key="IBUIImageEdgeInsets.bottom">0.0</double>
+						<double key="IBUIImageEdgeInsets.left">33</double>
+						<double key="IBUIImageEdgeInsets.right">0.0</double>
+						<string key="IBUIHighlightedTitle">次</string>
+						<string key="IBUINormalTitle">次</string>
+						<object class="NSColor" key="IBUIHighlightedTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4yNzQ1MDk4MTc0IDAuNjAzOTIxNTkyMiAwLjgyNzQ1MDk5MDcAA</bytes>
+						</object>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="391010233"/>
-						<object class="NSCustomResource" key="IBUINormalImage">
+						<object class="NSCustomResource" key="IBUIHighlightedImage" id="318034464">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">navigationbar_right.png</string>
+							<string key="NSResourceName">arrow_right.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="595695824"/>
-						<reference key="IBUIFont" ref="495911012"/>
+						<reference key="IBUINormalImage" ref="318034464"/>
+						<reference key="IBUIFontDescription" ref="383601936"/>
+						<reference key="IBUIFont" ref="51578153"/>
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 44}</string>
@@ -232,10 +231,9 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="847863737"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="850724363"/>
-							<reference ref="578615022"/>
 							<reference ref="155292222"/>
 							<reference ref="1021298651"/>
+							<reference ref="578615022"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -245,18 +243,13 @@
 						<reference key="parent" ref="847863737"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">24</int>
-						<reference key="object" ref="850724363"/>
+						<int key="objectID">26</int>
+						<reference key="object" ref="578615022"/>
 						<reference key="parent" ref="847863737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
 						<reference key="object" ref="155292222"/>
-						<reference key="parent" ref="847863737"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="578615022"/>
 						<reference key="parent" ref="847863737"/>
 					</object>
 				</array>
@@ -268,16 +261,19 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.CustomClassName">BaseCalendarViewHeaderView</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="0.0" key="25.IBUIButtonInspectorSelectedEdgeInsetMetadataKey"/>
+				<real value="1" key="25.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="26.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="26.IBUIButtonInspectorSelectedEdgeInsetMetadataKey"/>
+				<real value="1" key="26.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">32</int>
+			<int key="maxID">34</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
@@ -285,9 +281,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="navigationbar_center.png">{229, 44}</string>
-			<string key="navigationbar_left.png">{46, 44}</string>
-			<string key="navigationbar_right.png">{46, 44}</string>
+			<string key="arrow_left.png">{10, 16}</string>
+			<string key="arrow_right.png">{10, 16}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
