@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Enum.h"
+#import "ZHJCalendar_Enum.h"
 #import "CalendarViewDataSource.h"
 #import "CalendarViewDelegate.h"
 #import "CalendarGridView.h"
 #import "CalendarViewHeaderView.h"
 #import "CalendarViewFooterView.h"
 #import "CalendarScrollView.h"
-
-#define CALENDAR_VIEW_HEIGHT_WITHOUT_FOOTER_VIEW 251
-#define CALENDAR_VIEW_HEIGHT                     301
 
 @class CalDay;
 @class CalMonth;
@@ -114,7 +111,7 @@
 - (void)hide:(BOOL)animated;
 
 - (void)hide;
-
+// カレンダーのセルを作りなおして表示を更新
 - (void)updateCalendar;
 
 - (CalendarGridView *)dequeueCalendarGridViewWithIdentifier:(NSString *)identifier;

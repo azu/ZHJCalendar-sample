@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Enum.h"
+#import "ZHJCalendar_Enum.h"
 
 @interface CalDay : NSObject
 {

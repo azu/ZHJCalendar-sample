@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Enum.h"
+#import "ZHJCalendar_Enum.h"
 @class CalendarView;
 @class CalDay;
 

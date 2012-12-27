@@ -22,6 +22,7 @@
 
 - (void)loadView {
     [super loadView];
+    // カレンダーを読み込んで表示する
     [self loadCalendarView];
 }
 
@@ -49,6 +50,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 更新し直す
+    [self.calendarView updateCalendar];
 }
 
 @end

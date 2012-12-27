@@ -8,7 +8,7 @@
 
 #import "CalDay.h"
 #import "DateUtil.h"
-#import "Enum.h"
+#import "ZHJCalendar_Enum.h"
 
 #define SECOND_OF_A_DAY 24*60*60
 
